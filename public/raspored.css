@@ -1,0 +1,215 @@
+body {
+    background: wheat;
+}
+
+.meni {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.meni a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.meni a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.meni a.active {
+    background-color: white;
+    color: black;
+}
+
+/*DIO ZA PRAVLJENJE TABELE*/
+
+.tabela {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: 25px repeat(5, 1fr);
+    grid-auto-rows: 50px;
+    width: 55%;
+    margin: 0 auto;
+    grid-auto-rows: minmax(50px,auto);
+    grid-auto-columns: minmax(10px,auto);
+    text-align: center;
+  }
+
+.tabela > .dan {
+    border: none;
+    text-align: center;
+    margin: auto;
+}
+
+.dan {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-content: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: larger;
+}
+
+.prva-celija {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px dashed black;
+    background-color: #e6e6e6;
+}
+
+.par {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #e6e6e6;
+}
+
+.nep {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px dashed black;
+    background-color: #e6e6e6;
+}
+
+.osam {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    text-align: center;
+    padding-left: 60px;
+    border: none;
+}
+
+.deset {
+    grid-column-start: 6;
+    grid-column-end: 10;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.dvanaest {
+    grid-column-start: 10;
+    grid-column-end: 14;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.petnaest {
+    grid-column-start: 16;
+    grid-column-end: 20;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.sedamnaest {
+    grid-column-start: 20;
+    grid-column-end: 24;
+    text-align: center;
+    padding-left: 60px;
+}
+
+.devetnaest {
+    grid-column-start: 24;
+    grid-column-end: 28;
+    text-align: center;
+    padding-left: 60px;
+}
+
+#predavanje-wt {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#vjezbe-wt {
+    grid-column-start: 13;
+    grid-column-end: 16;
+    border: 1px solid black;
+    border-right: 1px dashed black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#predavanje-rma {
+    grid-column-start: 17;
+    grid-column-end: 23;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#vjezbe-rma {
+    grid-column-start: 14;
+    grid-column-end: 17;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#tutorijal-dm {
+    grid-column-start: 17;
+    grid-column-end: 21;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#predavanje-dm {
+    grid-column-start: 21;
+    grid-column-end: 27;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#predavanje-oi {
+    grid-column-start: 13;
+    grid-column-end: 19;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #dee6ef;
+}
+
+#nista {
+    grid-column-start: 19;
+    grid-column-end: 25;
+    border: 1px solid black;
+    border-left: none;
+    background-color: #e6e6e6;
+}
+
+@media only screen and (max-width: 600px) {
+    .tabela {
+        display: table-row;
+        border-left: 1px solid black;
+        width: 80%;
+    }
+
+    div:empty {
+        display: none;
+    }
+
+    #predavanje-wt, #vjezbe-wt, #predavanje-rma, #vjezbe-rma, #predavanje-dm,
+    #tutorijal-dm, #predavanje-oi {
+        border: 1px solid black;
+    }
+
+    .tabela > .dan {
+        border: none;
+        border-right: none;
+        text-align: center;
+        align-content: center;
+    }
+
+    .osam, .deset, .dvanaest, .petnaest, .sedamnaest, .devetnaest {
+        display: none;
+    }
+  }

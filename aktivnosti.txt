@@ -1,0 +1,3 @@
+WT,Predavanje,14,15,utorak
+LD,Predavanje,15,17,srijeda
+NA,Predavanje,12.5,14.5,srijeda

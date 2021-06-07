@@ -1,0 +1,46 @@
+DELETE,/all,null,{\"message\":\"Uspješno obrisan sadržaj datoteka!\"}
+GET,/predmeti,null,[]
+POST,/predmet,{\"naziv\":\"RMA\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"WT\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"wt\"},{\"message\":\"Naziv predmeta postoji!\"}
+GET,/predmeti,null,[{\"naziv\":\"RMA\"},{\"naziv\":\"WT\"}]
+POST,/predmet,{\"naziv\":\"ASP\"},{\"message\":\"Uspješno dodan predmet!\"}
+DELETE,/all,null,{\"message\":\"Uspješno obrisan sadržaj datoteka!\"}
+POST,/predmet,{\"naziv\":\"DM\"},{\"message\":\"Uspješno dodan predmet!\"}
+GET,/predmeti,null,[{\"naziv\":\"DM\"}]
+DELETE,/all,null,{\"message\":\"Uspješno obrisan sadržaj datoteka!\"}
+GET,/predmeti,null,[]
+POST,/predmet,{\"naziv\":\"OOI\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"OOI\"},{\"message\":\"Naziv predmeta postoji!\"}
+GET,/predmeti,null,[{\"naziv\":\"OOI\"}]
+DELETE,/predmet/OOI,null,{\"message\":\"Uspješno obrisan predmet!\"}
+POST,/predmet,{\"naziv\":\"OIS\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"RMA\"},{\"message\":\"Uspješno dodan predmet!\"}
+GET,/predmeti,null,[{\"naziv\":\"OIS\"},{\"naziv\":\"RMA\"}]
+DELETE,/predmet/OIS,null,{\"message\":\"Uspješno obrisan predmet!\"}
+GET,/predmeti,null,[{\"naziv\":\"RMA\"}]
+POST,/aktivnost,{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"utorak\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+POST,/aktivnost,{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"UtOrak\"},{\"message\":\"Aktivnost nije validna!\"}
+POST,/aktivnost,{\"naziv\":\"RPR\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 14,\"dan\":\"UTORAK\"},{\"message\":\"Aktivnost nije validna!\"}
+GET,/aktivnosti,null,[{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"utorak\"}]
+POST,/aktivnost,{\"naziv\":\"WT\",\"tip\":\"Predavanje\",\"pocetak\": 14,\"kraj\": 15,\"dan\":\"utorak\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+GET,/aktivnosti,null,[{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"utorak\"},{\"naziv\":\"WT\",\"tip\":\"Predavanje\",\"pocetak\": 14,\"kraj\": 15,\"dan\":\"utorak\"}]
+POST,/predmet,{\"naziv\":\"RA\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"OOAD\"},{\"message\":\"Uspješno dodan predmet!\"}
+POST,/predmet,{\"naziv\":\"US\"},{\"message\":\"Uspješno dodan predmet!\"}
+DELETE,/predmet/OOAD,null,{\"message\":\"Uspješno obrisan predmet!\"}
+GET,/predmeti,null,[{\"naziv\":\"RMA\"},{\"naziv\":\"RA\"},{\"naziv\":\"US\"}]
+POST,/aktivnost,{\"naziv\":\"LD\",\"tip\":\"Predavanje\",\"pocetak\": 15,\"kraj\": 17,\"dan\":\"srijeda\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+POST,/aktivnost,{\"naziv\":\"OBP\",\"tip\":\"Predavanje\",\"pocetak\": 16.1,\"kraj\": 17,\"dan\":\"srijeda\"},{\"message\":\"Aktivnost nije validna!\"}
+POST,/aktivnost,{\"naziv\":\"NA\",\"tip\":\"Predavanje\",\"pocetak\": 12.5,\"kraj\": 14.5,\"dan\":\"srijeda\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+POST,/predmet,{\"naziv\":\"US\"},{\"message\":\"Naziv predmeta postoji!\"}
+POST,/aktivnost,{\"naziv\":\"SP\",\"tip\":\"Predavanje\",\"pocetak\": 12.5,\"kraj\": 14.5,\"dan\":\"utorak\"},{\"message":"Aktivnost nije validna!\"}
+POST,/aktivnost,{\"naziv\":\"SP\",\"tip\":\"Predavanje",\"pocetak\": 12.5,\"kraj\": 14.5,\"dan\":\"srijeda\"},{\"message\":\"Aktivnost nije validna!\"}
+GET,/predmet/RMA/aktivnost,null,[{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"utorak\"}]
+POST,/aktivnost,{\"naziv\":\"RMA\",\"tip\":\"Vježbe\",\"pocetak\": 12,\"kraj\": 13.5,\"dan\":\"petak\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+GET,/predmet/RMA/aktivnost,null,[{\"naziv\":\"RMA\",\"tip\":\"Predavanje\",\"pocetak\": 12,\"kraj\": 13,\"dan\":\"utorak\"},{\"naziv\":\"RMA\",\"tip\":\"Vježbe\",\"pocetak\": 12,\"kraj\": 13.5,\"dan\":\"petak\"}]
+DELETE,/aktivnost/RMA,null,{\"message\":\"Uspješno obrisana aktivnost!\"}
+POST,/aktivnost,{\"naziv\":\"RMS\",\"tip\":\"Predavanje",\"pocetak\": 12.5,\"kraj\": 14.5,\"dan\":\"cetvrtak\"},{\"message\":\"Uspješno dodana aktivnost!\"}
+DELETE,/aktivnost/RMS,null,{\"message\":\"Uspješno obrisana aktivnost!\"}
+GET,/predmet/RMS/aktivnost,null,[]
+GET,/predmet/RMA/aktivnost,null,[]
